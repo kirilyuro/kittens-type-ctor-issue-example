@@ -37,3 +37,5 @@ Foo(MyContainer(Bar("baz"))).show
 ```
 
 The expected output is `Foo(bar = Wrapped Bar(a = baz))`, i.e. using a derived `Show[Foo]`, the custom `Show[MyContainer[A]]` (for `A = Bar`) and a derived `Show[Bar]`.
+
+When deriving `Show[Foo]` using Kittens' manual semi mode or the Catnip annotation, a new derived `Show[MyContainer[A]]` is used instead of the defined custom one.
